@@ -1,0 +1,11 @@
+def show_heroes():
+    print()
+    print()
+    print('     Abrams...Apollo...Baba...Bebop...Billy...Calico...Celeste...Deadman Danny')
+    print(' The Doorman...Drifter...Dynamo...Graves...Grey Talon...Haze...Holliday...Infernus')
+    print('     Kelvin...Ivy...Lady Geist...Lash...Mina...Mirage...McGinnis...Mo & Krill')
+    print('Nurse Harrow...Paige...Paradox...Rat King...Rem...Seven...Shiv...Silver...Sinclair.')
+    print('     Solomon...Venator...Victor...Vindicta...Violet...Vyper...Wraith...Yamato')
+    print()
+    print()
+show_heroes()
