@@ -307,7 +307,7 @@ def show_heroes():
     print(' The Doorman...Drifter...Dynamo...Graves...Grey Talon...Haze...Holliday...Infernus')
     print('     Kelvin...Ivy...Lady Geist...Lash...Mina...Mirage...Mc Ginnis...Mo & Krill')
     print('Nurse Harrow...Paige...Paradox...Rat King...Rem...Seven...Shiv...Silver...Sinclair')
-    print('     Solomon...Venator...Victor...Vindicta...Violet...Vyper...Wraith...Yamato')
+    print('  Solomon...Venator...Victor...Vindicta...Violet...Vyper...Warden...Wraith...Yamato')
     print()
     print()
 
