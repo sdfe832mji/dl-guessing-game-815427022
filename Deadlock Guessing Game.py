@@ -1,4 +1,4 @@
-import random
+``import random
 import time
 import sys
 
@@ -398,7 +398,7 @@ def start_round_item():
             print()
             time.sleep(1)
 
-            my_guess = input('Guess what item it is:').lower()
+            my_guess = input('Guess what item it is:').lower().strip()
 
             if my_guess not in catalog:
                 raise ValueError
@@ -515,7 +515,7 @@ def loop_game():
 
     while True:
         print('Would you like to replay?')
-        replay_consent = input('Please enter \"Yes\" or \"No\":').lower()
+        replay_consent = input('Please enter \"Yes\" or \"No\":').lower().strip()
         if replay_consent == 'yes':
             print()
             print('The game is restarting.')
@@ -524,7 +524,7 @@ def loop_game():
             while True:
                 print('Would you like to play *Item Mode* or *Hero Mode*?')
                 print('1. I would like to guess an item.\n2. I would like to guess a hero.')
-                game_mode_select = input('Enter \"1\" or \"2\":').lower()
+                game_mode_select = input('Enter \"1\" or \"2\":').lower().strip
                 if game_mode_select == '1':
                     print('The game will start shortly.')
                     print()
@@ -566,14 +566,14 @@ print()
 
 while True:
     print('Would you like to play?')
-    game_consent = input('Please enter \"Yes\" or \"No\":').lower()
+    game_consent = input('Please enter \"Yes\" or \"No\":').lower().strip()
     if game_consent == 'yes':
         print()
 
         while True:
             print('Would you like to play *Item Mode* or *Hero Mode*?')
             print('1. I would like to guess an item.\n2. I would like to guess a hero.')
-            game_mode_select = input('Enter \"1\" or \"2\":').lower()
+            game_mode_select = input('Enter \"1\" or \"2\":').lower().strip()
             if game_mode_select == '1':
                 print()
                 print('The game will start shortly.')
