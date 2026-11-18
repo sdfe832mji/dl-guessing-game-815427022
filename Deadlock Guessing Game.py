@@ -324,7 +324,7 @@ gamemode = True
 
 def lost_game():
     print()
-    print('You lost the game!')
+    print('You lost!')
     print()
     time.sleep(1)
 
@@ -333,7 +333,7 @@ def win_game():
     print()
     global winner
     winner = True
-    print('You won the game!')
+    print('You won!')
     print()
     time.sleep(1)
 
@@ -370,7 +370,7 @@ def start_round_item():
     print('The possible answers are:')
     time.sleep(1)
     show_catalog()
-    time.sleep(2)
+    time.sleep(1)
     print('Please enter the items as they are written here.')
     time.sleep(1)
     print()
@@ -451,7 +451,7 @@ def start_round_hero():
     print('The possible answers are:')
     time.sleep(1)
     show_heroes()
-    time.sleep(2)
+    time.sleep(1)
     print('Please enter the names as they are written here.')
     time.sleep(1)
     print()
@@ -524,14 +524,14 @@ def loop_game():
             while True:
                 print('Would you like to play *Item Mode* or *Hero Mode*?')
                 print('1. I would like to guess an item.\n2. I would like to guess a hero.')
-                game_mode_select = input('Enter \"1\" or \"2\":').lower().strip
-                if game_mode_select == '1':
+                gamemode_select = input('Enter \"1\" or \"2\":').lower().strip()
+                if gamemode_select == '1':
                     print('The game will start shortly.')
                     print()
                     time.sleep(1)
                     gamemode = True
                     break
-                elif game_mode_select == '2':
+                elif gamemode_select == '2':
                     print('The game will start shortly.')
                     print()
                     time.sleep(1)
@@ -548,6 +548,7 @@ def loop_game():
         elif replay_consent == 'no':
             print()
             print('Thank you for playing!')
+            time.sleep(2)
             sys.exit(0)
         else:
             print()
@@ -600,6 +601,7 @@ while True:
     elif game_consent == 'no':
         print()
         print('Thank you for playing!')
+        time.sleep(2)
         sys.exit(0)
     else:
         print()
@@ -617,15 +619,26 @@ while True:
     if winner:
         count = count + 1
         if count == 1:
-            print('Your current highscore is:')
+            print('Your current win streak is:')
             print(count,'win.')
             print()
             time.sleep(1)
         else:
-            print('Your current highscore is:')
+            print('Your current win streak is:')
             print(count,'wins.')
             print()
             time.sleep(1)
         loop_game()
     else:
-        loop_game()
+        if count == 0:
+            print('Your current win streak is 0 wins.')
+            print()
+            time.sleep(1)
+            loop_game()
+        else:
+            count = 0
+            print('You lost your streak.')
+            print('Your current win streak is now 0 wins.')
+            print()
+            time.sleep(1)
+            loop_game()
